@@ -3,8 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Selamat datang di Majelis Al Mubarrok, Jam'iyyah Sholawat Al Banjari. Nikmati sholawat dan keberkahan bersama kami.">
+        <title>Majelis Al Mubarrok | Jam'iyyah Sholawat Al Banjari</title>
 
-        <title>Laravel</title>
+        <!-- Meta Tags -->
+        <meta name="keywords" content="Majelis Al Mubarrok, Jam'iyyah Sholawat, Al Banjari, Sholawat, Keberkahan, Majelis Sholawat">
+        <meta name="author" content="Majelis Al Mubarrok">
+        <meta name="robots" content="index, follow">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
