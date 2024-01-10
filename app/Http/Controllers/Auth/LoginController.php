@@ -12,22 +12,28 @@ class LoginController extends Controller
 {
     public function index(Request $request)
     {
-        if (!empty($request->token) && $request->token == env('APP_LOGIN_TOKEN')) {
-            return view('auth.login');
-        }
-
-        return abort(404);
+        return view('auth.login');
     }
 
     public function store(Request $request)
     {
 
         $request->validate([
-            'email' => 'required|string',
+            'user' => 'required|string',
             'password' => 'required|string',
         ]);
 
-        $auth = User::where(['email' => $request->email, 'status' => 1])->first();
+        $auth = null;
+        $authWithEmail = User::where(['email' => $request->user, 'active' => 1])->first();
+        $authWithUsername = User::where(['username' => $request->user, 'active' => 1])->first();
+
+        if (!empty($authWithEmail) && empty($authWithUsername)) {
+            $auth = $authWithEmail;
+        }
+
+        if (empty($authWithEmail) && !empty($authWithUsername)) {
+            $auth = $authWithUsername;
+        }
 
         if (!empty($auth) && Hash::check($request->password, $auth->password)) {
             Auth::login($auth);
