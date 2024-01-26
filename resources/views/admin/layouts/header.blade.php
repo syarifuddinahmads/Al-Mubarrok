@@ -1,99 +1,85 @@
-<nav
-class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-id="layout-navbar">
-<div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-  <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-    <i class="bx bx-menu bx-sm"></i>
-  </a>
-</div>
+<header id="page-topbar">
+  <div class="navbar-header">
+      <div class="d-flex">
+          <!-- LOGO -->
+          <div class="navbar-brand-box">
+              <a href="index.html" class="logo logo-dark">
+                  <span class="logo-sm">
+                      <img src="{{asset('assets/images/logo.svg')}}" alt="" height="22">
+                  </span>
+                  <span class="logo-lg">
+                      <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="17">
+                  </span>
+              </a>
 
-<div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-  <!-- Search -->
-  <div class="navbar-nav align-items-center">
-    <div class="nav-item d-flex align-items-center">
-      <i class="bx bx-search fs-4 lh-0"></i>
-      <input
-        type="text"
-        class="form-control border-0 shadow-none ps-1 ps-sm-2"
-        placeholder="Search..."
-        aria-label="Search..." />
-    </div>
+              <a href="index.html" class="logo logo-light">
+                  <span class="logo-sm">
+                      <img src="{{asset('assets/images/logo-light.svg')}}" alt="" height="22">
+                  </span>
+                  <span class="logo-lg">
+                      <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="19">
+                  </span>
+              </a>
+          </div>
+
+          <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+              <i class="fa fa-fw fa-bars"></i>
+          </button>
+
+          <!-- App Search-->
+          <form class="app-search d-none d-lg-block">
+              <div class="position-relative">
+                  <input type="text" class="form-control" placeholder="Search...">
+                  <span class="bx bx-search-alt"></span>
+              </div>
+          </form>
+      </div>
+
+      <div class="d-flex">
+
+          <div class="dropdown d-inline-block d-lg-none ms-2">
+              <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="mdi mdi-magnify"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                  aria-labelledby="page-header-search-dropdown">
+
+                  <form class="p-3">
+                      <div class="form-group m-0">
+                          <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                              <div class="input-group-append">
+                                  <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <div class="dropdown d-none d-lg-inline-block ms-1">
+              <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                  <i class="bx bx-fullscreen"></i>
+              </button>
+          </div>
+
+          <div class="dropdown d-inline-block">
+              <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img class="rounded-circle header-profile-user" src="{{asset('assets/images/users/avatar-1.jpg')}}"
+                      alt="Header Avatar">
+                  <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+                  <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                  <!-- item-->
+                  <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+              </div>
+          </div>
+
+      </div>
   </div>
-  <!-- /Search -->
-
-  <ul class="navbar-nav flex-row align-items-center ms-auto">
-    <!-- Place this tag where you want the button to render. -->
-    <li class="nav-item lh-1 me-3">
-      <a
-        class="github-button"
-        href="https://github.com/themeselection/sneat-html-admin-template-free"
-        data-icon="octicon-star"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-        >Star</a
-      >
-    </li>
-
-    <!-- User -->
-    <li class="nav-item navbar-dropdown dropdown-user dropdown">
-      <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-        <div class="avatar avatar-online">
-          <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-        </div>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li>
-          <a class="dropdown-item" href="#">
-            <div class="d-flex">
-              <div class="flex-shrink-0 me-3">
-                <div class="avatar avatar-online">
-                  <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                </div>
-              </div>
-              <div class="flex-grow-1">
-                <span class="fw-medium d-block">John Doe</span>
-                <small class="text-muted">Admin</small>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <div class="dropdown-divider"></div>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            <i class="bx bx-user me-2"></i>
-            <span class="align-middle">My Profile</span>
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            <i class="bx bx-cog me-2"></i>
-            <span class="align-middle">Settings</span>
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="#">
-            <span class="d-flex align-items-center align-middle">
-              <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-              <span class="flex-grow-1 align-middle ms-1">Billing</span>
-              <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <div class="dropdown-divider"></div>
-        </li>
-        <li>
-          <a class="dropdown-item" href="javascript:void(0);">
-            <i class="bx bx-power-off me-2"></i>
-            <span class="align-middle">Log Out</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <!--/ User -->
-  </ul>
-</div>
-</nav>
+</header>

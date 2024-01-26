@@ -1,15 +1,13 @@
-<!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
+<!-- JAVASCRIPT -->
+<script src="{{asset('assets/libs/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/libs/metismenu/metisMenu.min.js')}}"></script>
+<script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
+<script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
 
-    <script src="{{asset('sneat/assets/vendor/libs/jquery/jquery.js')}}"></script>
-    <script src="{{asset('sneat/assets/vendor/libs/popper/popper.js')}}"></script>
-    <script src="{{asset('sneat/assets/vendor/js/bootstrap.js')}}"></script>
-    <script src="{{asset('sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
-    <script src="{{asset('sneat/assets/vendor/js/menu.js')}}"></script>
+<!-- dashboard blog init -->
+<script src="{{asset('assets/js/pages/dashboard-blog.init.js')}}"></script>
 
-    <!-- endbuild -->
+<script src="{{asset('assets/js/app.js')}}"></script>
 
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="{{asset('sneat/assets/js/main.js')}}"></script>
+@stack('js')

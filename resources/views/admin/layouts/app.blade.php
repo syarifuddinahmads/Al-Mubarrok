@@ -1,69 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html
-  lang="en"
-  class="light-style layout-menu-fixed layout-wide"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Blog Dashboard | Skote - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesbrand" name="author" />
 
-      <title>{{ !empty($title_page) ? $title_page.' | ' : '' }} Majelis Hadrah Al Mubarrok</title>
+       @include('admin.layouts.css')
 
-    <meta name="description" content="" />\
+    </head>
 
-    @include('admin.layouts.css')
+    <body data-sidebar="dark">
 
-  </head>
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
 
-  <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
-        <!-- Menu -->
-        @include('admin.layouts.sidebar')
-        <!-- / Menu -->
+        <!-- Begin page -->
+        <div id="layout-wrapper">
 
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
+            
+            @include('admin.layouts.header')
 
-          @include('admin.layouts.header')
+            <!-- ========== Left Sidebar Start ========== -->
+            @include('admin.layouts.sidebar')
+            <!-- Left Sidebar End -->
 
-          <!-- / Navbar -->
+            
 
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
 
-            <div class="container-fluid flex-grow-1 container-p-y">
-              <!-- Layout Demo -->
-              @yield('content')
-              <!--/ Layout Demo -->
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @yield('content')
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @include('admin.layouts.footer')
             </div>
-            <!-- / Content -->
+            <!-- end main content-->
 
-            <!-- Footer -->
-            @include('admin.layouts.footer')
-            <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
         </div>
-        <!-- / Layout page -->
-      </div>
+        <!-- END layout-wrapper -->
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
 
-    @include('admin.layouts.js')
-  </body>
+        @include('admin.layouts.js')
+
+    </body>
 </html>
